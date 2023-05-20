@@ -61,8 +61,8 @@ class CharacterSelectionScene extends Phaser.Scene {
       height: 3,
       cellWidth: 130,
       cellHeight: 130,
-      x: 150,
-      y: -200,
+      x: 400,
+      y: 100,
     });
     var button1Container3 = this.add.container(newWidth / 2, 650);
 
@@ -162,13 +162,13 @@ class CharacterSelectionScene extends Phaser.Scene {
             targets: gameObject[0],
             tweens: [
               {
-                scale: 0.2,
+                scale: 0.6,
                 ease: 'Bounce.easeIn',
                 delay: 0,
                 duration: 200,
               },
               {
-                scale: 0.15,
+                scale: 0.55,
                 ease: 'Bounce.easeOut',
                 delay: 0,
                 duration: 200,
@@ -230,7 +230,7 @@ function characterTokens(scene) {
 
     scene[window[character + 'token']] = scene.add
       .image(0, 0, character + 'Avatar')
-      .setScale(0.15)
+      .setScale(0.55)
       .setData({ name: charNames[i], charId: charArray[i] })
       .setInteractive();
 
